@@ -1,0 +1,21 @@
+## Interface: 20504, 20505, 20506
+## Title: Triage - Aegis & Beacon
+## Author: iintellectualgamer
+## Notes: Healing range alerts, click casting, and world, party, and target markers.
+## Version: 0.1.1
+## X-Build: Test 17
+## SavedVariablesPerCharacter: TriageAegisBeaconDB, VigilSigilDB
+
+ClientAPI.lua
+Core.lua
+CombatPanel.lua
+Spellbook.lua
+AbilityPicker.lua
+Profiles.lua
+Utility.lua
+Markers.lua
+Healing.lua
+RangeAlerts.lua
+Buffs.lua
+Settings.lua
+Minimap.lua

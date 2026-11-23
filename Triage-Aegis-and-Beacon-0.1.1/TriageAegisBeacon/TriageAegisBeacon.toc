@@ -1,0 +1,21 @@
+## Interface: 120000, 120001, 120005, 120007, 120100, 120105, 120107, 110200, 110205, 110207, 100207, 16001, 50500, 50501, 50502, 50503, 50504, 40400, 40401, 40402, 30403, 30404, 30405, 38000, 38001, 38002, 20504, 20505, 20506, 11503, 11504, 11505, 11506, 11507, 11508, 11509
+## Title: Triage - Aegis & Beacon
+## Author: iintellectualgamer
+## Notes: Healing range alerts, click casting, and world, party, and target markers.
+## Version: 0.1.1
+## X-Build: Test 17
+## SavedVariablesPerCharacter: TriageAegisBeaconDB, VigilSigilDB
+
+ClientAPI.lua
+Core.lua
+CombatPanel.lua
+Spellbook.lua
+AbilityPicker.lua
+Profiles.lua
+Utility.lua
+Markers.lua
+Healing.lua
+RangeAlerts.lua
+Buffs.lua
+Settings.lua
+Minimap.lua
