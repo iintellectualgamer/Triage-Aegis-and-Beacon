@@ -36,13 +36,6 @@ For an update from an older Triage build, copy the new addon files over the exis
 
 The spell and talent picker adapts to the installed client. WoW controls the availability of world markers, Assist pings, pull countdowns, cleanse cues, Blizzard Click Casting, and group roles.
 
-## Bring settings forward from VigilSigil
-
-Close WoW and move the old `VigilSigil` addon folder out of `Interface\AddOns`. Install the new folder. Existing keyboard assignments use the same binding IDs.
-
-For each character, look in the same edition's `WTF\Account\<account>\<realm>\<character>\SavedVariables` folder. If `VigilSigil.lua` exists and `TriageAegisBeacon.lua` is absent, copy `VigilSigil.lua` there as `TriageAegisBeacon.lua`. Triage imports those character settings at login.
-
-
 ## Heal and mark
 
 - Choose **All heals** or type `/triage heals` to see the learned healing spells, health-bar clicks, and keyboard shortcuts for your build. Select **Show all clicks** to search every active or disabled assignment by spell name, ID, or gesture. Select a row to edit its click. Auto clicks and Auto keys refresh as you learn abilities or change your build. Saved clicks and existing WoW keybinds take priority.
