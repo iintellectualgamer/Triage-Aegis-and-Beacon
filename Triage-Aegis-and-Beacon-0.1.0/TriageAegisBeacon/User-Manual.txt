@@ -1,0 +1,601 @@
+TRIAGE - AEGIS & BEACON
+User manual | Initial public release 0.1.0 / Build 22
+
+==============================================================================
+1. Player manual
+Party and raid healing, group coordination, and a tabbed workspace for your character.
+
+Game versions declared by 0.1.0 / Build 22
+  Midnight Retail - 12.0.0, 12.0.1, 12.0.5, 12.0.7, 12.1.0, 12.1.5, 12.1.7
+  The War Within Retail - 11.2.0, 11.2.5, 11.2.7
+  Dragonflight Retail - 10.2.7
+  WoW Forever - 1.60.1
+  Mists of Pandaria Classic - 5.5.0, 5.5.1, 5.5.2, 5.5.3, 5.5.4
+  Cataclysm Classic - 4.4.0, 4.4.1, 4.4.2
+  Wrath of the Lich King Classic - 3.4.3, 3.4.4, 3.4.5
+  Wrath Titan Reforged - 3.80.0, 3.80.1, 3.80.2
+  Burning Crusade Classic / Anniversary - 2.5.4, 2.5.5, 2.5.6
+  WoW Classic Era / Hardcore / Season of Discovery - 1.15.3, 1.15.4, 1.15.5, 1.15.6, 1.15.7, 1.15.8, 1.15.9
+
+Usual installation folders
+  Retail                    _retail_\Interface\AddOns
+  WoW Forever               _forever_\Interface\AddOns
+  Expansion Classic         _classic_\Interface\AddOns
+  Classic Era family         _classic_era_\Interface\AddOns
+Use the folder opened by your launcher for your edition.
+
+The spell and talent picker adapts to the installed client. WoW controls the availability of world markers, Assist pings, pull countdowns, cleanse cues, Blizzard Click Casting, and group roles.
+
+Install or update
+1. Close World of Warcraft. Extract Triage-Aegis-and-Beacon-0.1.0.zip.
+2. Copy the inner TriageAegisBeacon folder into your edition's Interface\AddOns folder.
+3. Confirm TriageAegisBeacon.toc is directly inside that folder.
+4. Launch the same edition. Enable Triage - Aegis & Beacon from AddOns, then log in.
+5. Type /triage version. This release shows 0.1.0 / Build 22.
+
+For updates, overwrite the files in the existing TriageAegisBeacon folder with WoW closed.
+Your character settings are stored in WTF.
+Read the bundled User-Manual.txt or download the standalone PDF edition of this guide.
+The addon's spell and talent lists follow the game client and current character build as
+you move between zones, instances, and earlier expansion content within that client.
+
+Open Triage
+Use /triage show or left-click the gold beacon on the minimap. Right-click the beacon to open
+Settings.
+
+Healing loadout and emergency healing
+Open All heals on the healing panel or type /triage heals. It shows the learned healing
+spells for your current specialization and build with their health-bar gestures and keys.
+It follows spellbook, rank, talent, and specialization changes. Show all clicks lists every
+current gesture. Search by spell name, ID, or gesture and select a row to edit the click.
+Keys that are already in use take priority. If WoW is protecting bindings in
+combat, the addon applies changes when combat ends.
+
+The Emergency button shows your selected emergency spell and its cooldown where the
+client supports it. Press Alt + right-click on a health bar or hover an ally and press
+the keyboard shortcut. Alt + E is preferred when free. A red underline marks living
+units below 30% health.
+
+Emergency Auto target starts on. Outside combat, pressing Emergency with no living
+friendly mouseover checks for the wounded ally with the lowest readable health percentage
+in confirmed range. If there is no eligible choice, Emergency can use your friendly
+target. In combat, use the ally's health bar, friendly mouseover, or selected target.
+With Target player on healing clicks enabled in Mouse buttons, supported healing actions
+also select the recipient. WoW still applies the spell's normal cast requirements.
+
+In Healing loadout, turn off Auto clicks, Auto keys, and Auto target for manual setup.
+Saved clicks and manual WoW bindings remain available. To choose an emergency spell,
+edit Alt + right-click in Custom spells. The selected spell's usual conditions apply.
+In the same panel, Quiet Group pauses automatic range chat, whispers, pings, and
+group-start buff notices. Manual markers and alerts remain available.
+
+Creator credits
+Created by iintellectualgamer. Contact iintellectualgamer@gmail.com. The creator uses
+iintellectualgamer on Twitch and YouTube.
+
+Test characters
+  Wissegmini-Kil'jaeden - Human Paladin, Alliance, Midnight Season 2 Retail
+  Wissegmini-Kil'jaeden - Draenei Paladin, Alliance, Midnight Season 2 Retail (no footage used)
+  Wiisggemini-Kel'thuzad - Goblin Shaman, Horde, Midnight Season 2 Retail
+  Wiiseegemini-Wiiseegemini - Troll Priest, Horde, WoW Forever
+  Wwiisegemini-Wwiisegemini - Horde, WoW Forever
+
+In Settings > Credits, select and copy the creator's email, Twitch and YouTube handle,
+the Triage project page, or the character and realm list.
+
+Triage shows one local credit line when it loads. Type /triage credits or open Settings >
+Credits. Choose Select beside an item and press Ctrl+C to copy it. To hide future login
+credits for this character, clear Show credits in my chat when Triage loads.
+
+Bring forward older settings
+If you installed the earlier VigilSigil folder, move it out of Interface\AddOns while WoW is
+closed. Existing in-game key assignments from that release apply to Triage. To migrate
+character settings, copy your character's old VigilSigil.lua to TriageAegisBeacon.lua in
+WTF\Account\<account>\<realm>\<character>\SavedVariables. Use the same game edition's folder
+and make the copy only if the new saved file does not already exist.
+
+==============================================================================
+2. Panel and appearance
+Keep combat tools close and move deeper setup to the settings window.
+
+Control / Action
+  Party  -  Open your health bar and up to four party bars. In a raid, this is your own
+  subgroup. Appearance can add a pet bar.
+  Raid  -  See up to 40 clickable players in WoW's eight numbered subgroups.
+  Markers  -  Open world flags, party and target icons, ready check, and pull countdown.
+  Combined  -  Switch automatically between the party and full raid above markers.
+  Settings  -  Open Custom spells, Healing loadout, Spell icons, Mouse buttons, Practice, Range alerts,
+  Buff coverage, Appearance, Keybinds, Profiles, or Credits.
+  Minus / plus  -  Collapse to the title bar or restore the current view.
+  X  -  Hide the play panel. Use the minimap button or /triage show to bring it back.
+  Title bar  -  Drag to place the play panel outside combat.
+
+Minimap beacon
+Left-click to show or hide the play panel. Right-click for Settings. Drag to move it around
+the minimap edge. Use /triage minimap reset to restore its position and visibility.
+
+Appearance controls
+Set panel opacity from 25% to 100%, scale to 85%, 100%, or 115%, and choose Apply appearance.
+Choose Compact or Comfortable party spacing, panel colors, and the pet or minimap button.
+Show party roles displays Tank, Healer, DPS, or Unassigned. Settings keeps its normal opacity.
+
+Health readouts
+Show current health and Show health percentages are separate switches in Appearance.
+Apply appearance to show both, either one, or just the health fill. They apply to Party,
+Raid, and the optional pet bar. Large health values use the game's abbreviated format.
+Raid and Combined in a raid use a wider grid for both readouts and the ! control.
+When you show a single readout, it can use space freed by the hidden readout.
+When a readable unit state is available, Offline, Dead, or Ghost replaces the numbers.
+
+Shield, healing, and mana cues
+Show absorbs and incoming heals in Appearance controls the thin strips at the top of
+health bars. Blue marks damage absorption, amber marks healing absorption, and green
+marks incoming healing reported by your client. Each strip fills independently and
+is scaled to the unit's maximum health. The game supplies these values.
+
+On supported Midnight and WoW Forever clients, enable Show a Private Aura icon in
+Appearance to add one game-managed Private Aura slot per player bar. Apply appearance
+outside combat to change the setting. Use WoW's boss warnings for encounter alerts.
+
+Classic and WoW Forever can show your mana and threat below the healing bars. High
+threat means you are competing for threat. Aggro on you means a creature is targeting
+you according to WoW's threat data. On visible group bars, amber edges show high
+threat and red edges show aggro where WoW exposes the state. On WoW Forever and
+older Classic clients with the five-second rule, the 5s swipe marks the approximate
+wait after observed spell mana spending. Use Show mana and threat cues in Appearance.
+
+Open Practice and select Sample cues to preview shields, healing absorption, incoming
+healing, and critical health. The sample bar still lets you test your gestures.
+
+Priority players and simple cues
+Pin the tank below Self in Party or pin characters within their own raid subgroups.
+Regrouping and pins update after combat. A health-bar tooltip shows the player's name
+when available and the active assignments for Left-click, Middle-click, and Right-click.
+Hold Ctrl, Alt, or Shift over the bar to see the active clicks for those modifiers.
+Combat tooltips are optional and start off. Use Custom spells > Saved clicks for every
+binding. The bar gets a thin gold outline while hovered. Find Show health-bar hover
+outline in Appearance, then use Apply appearance to change it.
+
+
+Combat controls
+Use the layout tabs, title controls, minimap button, automatic alert switch, or marker shortcut
+during combat. Settings stays available. Changes to spell and mouse assignments, the healer
+shortcut, panel size, and priority order take effect after combat. Opacity, bar colors, and
+health labels can update immediately. Move the panel and assign game keys outside combat.
+
+==============================================================================
+3. Healing spells and keys
+Choose your spells once and put the casts you use most within reach.
+
+
+Assign mouse clicks
+Open Settings > Custom spells, or choose Assign spells from Party, Raid, or Combined.
+Left-click, Middle-click, and Right-click start with all modifiers off. Toggle Alt, Ctrl, and Shift.
+Use the arrows by Buttons 1-5 to reach Button 31. These filters cover all 248 combinations
+the addon can assign when WoW receives the mouse input.
+
+Select Pick, type a learned spell's name or ID, or drag its icon from the WoW spellbook or
+action bar onto the field or Pick. Triage copies the spell ID and leaves the icon on your
+cursor. Return an action-bar icon to its slot, or cancel a spellbook drag. A typed or copied
+ID stays visible. Retail uses the name when it maps to the same spell. Forever and Classic
+clients with ranked spells preserve the learned rank for an exact spell ID.
+Edits stay in the form as you switch modifiers or button groups.
+Choose Save spells to apply them outside combat. Look for "Assigned spells saved." in
+Settings and your chat window. If you save in combat, Triage confirms again when the
+new bindings are active. Hover a bar to preview what your click will do, and hold Ctrl
+to check the Ctrl + left-click assignment.
+A blank field returns that click to its empty-field behavior. Blank Left-click and
+Alt + middle-click select the unit. Other blank clicks have no action.
+
+Auto-fill single and Auto-fill area restore the suggested spells for their original tile
+gestures listed below. Changes saved during combat apply after combat.
+
+Review saved custom spells
+In Custom spells, open Saved clicks to see stored assignments for your current profile.
+Each row shows its full mouse gesture and the assignment, with a name and ID when available.
+Check whether the assignment is active, unavailable in the current build, disabled, or set
+to apply after combat. Select a row to jump to its field. Save spells applies any edits.
+
+Search spells and talents
+Open Pick > Browse spells and talents beside an assignment field. Search by name or spell
+ID. Click All abilities to cycle through Assignable and Talents. Click an Assignable row to
+fill the field, then save on the original settings page. Hover a row to see its spell ID
+and details. On clients with ranked spells, the browser lists learned ranks separately.
+
+The same browser is available under Custom spells, Mouse buttons, and extra Spell icons.
+Triage reads learned healing, damage, tank, utility, racial, and pet spells from the
+client. It includes learned abilities inside spellbook groups and shows class, hero, PvP,
+Forever Legacy, and Classic talents where the game exposes them. Open the browser on the class
+and specialization you want to set up. Passive spells, unlearned talents, choices with no
+cast, and replaced spells have a status label. Assignable entries can be saved to a click.
+
+Talent changes and saved assignments
+Apply talent and hero changes in WoW. The picker refreshes with the new build. A stored
+spell becomes available again when you relearn it. It follows the active replacement
+when the game reports one for that spell ID. Cooldowns, forms, range, and PvP rules still
+apply when you cast.
+
+Choose zero through ten tiles
+Open Settings > Spell icons or type /triage icons. The count selects the first slots in
+order. Use the checkboxes to choose individual tiles. Pick spells for the two extras,
+enter a name or ID, or drop a learned spell onto the field or Pick. Saved fields show the
+name and ID together. A blank field leaves that extra slot empty.
+Select Save spell icons. The choices apply to Party, Raid, and Combined. Choosing zero
+collapses the spell rows so the health bars move up. Your health-bar gestures and spell
+keys still work. Icon changes saved during combat apply when combat ends.
+
+Unit bar click              Action
+Left-click                  Select this unit by default
+Middle-click                 Learned friendly dispel by default, when available
+Right-click                  Single target 2
+Shift + left-click           Single target 1
+Ctrl + left-click            Single target 3
+Shift + right-click          Area healing 1
+Alt + left-click             Area healing 2
+Ctrl + right-click           Area healing 3
+Alt + right-click            Emergency spell
+Alt + middle-click           Select this unit by default
+
+Configure plain mouse buttons
+Use Settings > Mouse buttons or /triage mouse for Left-click, Right-click, Middle-click,
+and the Alt + right-click emergency spell. All click combinations opens Assign spells.
+Both pages edit the same assignments. Triage suggests a learned emergency spell for healer
+classes. Restore mouse defaults restores left, middle, and emergency and enables targeting
+on healing clicks.
+
+Plain and modifier tiles
+Plain Left-click, Middle-click, and Right-click have separate tiles. Shift and Ctrl
+assignments appear in the Modifiers rows. All three healing views use the same assignments.
+Target (/target) shows which health-bar gesture selects the clicked player. None hides its
+tile. Hidden or unavailable tiles leave the space available to the rest of the row.
+
+Each spell tile shows its name, ID, gesture, and any Triage keyboard shortcut. Hover to see
+the full details. Use left, right, or middle-click on a spell tile for a quick cast.
+
+Holy Paladin and utility ID examples
+  212056  Absolution
+  125439  Revive Battle Pets
+  6940    Blessing of Sacrifice
+  200025  Beacon of Virtue
+  53563   Beacon of Light
+The game supplies localized names and determines availability. If a talent replaces a
+saved spell, the field shows the saved spell while the tile shows the active cast.
+
+Practice the live assignments
+Open Settings > Practice or type /triage practice. For a quick setup, assign one or two
+heals, then try those clicks on the practice target. It displays the gesture and active
+action without casting. Press a side button here to see which number WoW receives.
+
+Select a player directly
+Type /target or Target into any health-bar spell field, or choose Target player under Pick.
+Save, then use that click on a party or raid bar to set WoW's current target. For example,
+leave Holy Shock on Left-click and assign /target to Ctrl + left-click. Enter None or choose
+No action under Pick to disable a click, even if its blank default selects a player.
+
+Target the player you heal
+Target player on healing clicks starts on for each character. When you click a party or
+raid health bar with a supported friendly spell, Triage casts at that unit and selects it.
+Heal a different teammate to switch your target. This works on plain and modified clicks.
+Selection can still happen if WoW rejects the cast for cooldown or range. To keep your
+current target while healing, clear the checkbox in Settings > Mouse buttons. The checkbox
+saves immediately. Spell tiles and keyboard shortcuts retain their normal targeting.
+Assignment changes saved during combat apply after combat.
+
+Solo Flash of Light test
+Open Assign spells with all modifiers off. Put Flash of Light in Right-click and save.
+Right-click the Self bar.
+You can also left- or right-click its tile. Check the cast bar or mana while standing still
+with the spell ready.
+
+Quick tiles, keys, and Beacons
+Use the health bar gestures to aim unit-targeted heals at the clicked character. Quick tiles
+and spell keys try a living friendly mouseover, then a living friendly target. Standard heals
+can fall back to Self. Ground, hostile, self, pet, and revive actions follow their own
+targeting. Beacon of Light and Beacon of Faith require a friendly mouseover or target on
+tiles and keys. Test Beacon of Faith on a teammate with an available Beacon slot. Settings >
+Keybinds > Assign in WoW shows both sets of spell keys.
+
+Transfer profiles
+Settings > Profiles selects an export string for Ctrl+C. Paste it on another character and
+choose Import profile. TAB6 includes all click bindings, spells, and icon choices for the
+active specialization or talent group. Triage validates every slot before applying
+it. Older TAB1 through TAB5 exports apply the fields they contain. Target and None click
+assignments travel with the profile. The Target player on healing clicks setting is saved
+for each character.
+
+Dungeon and Raid presets
+In Profiles, use Save Dungeon or Save Raid to store your spells, all click assignments,
+and icon choices for this specialization. Use Dungeon opens Party and loads its saved setup.
+Use Raid opens Raid and loads its saved setup. Switch presets outside combat.
+
+==============================================================================
+4. Class and role coverage
+Choose the same spell controls for healing, tanking, damage, or utility. Suggestions prioritize common heals and support.
+
+Class / Editions / Examples to try if learned
+  Death Knight  -  Retail | Raise Ally or Anti-Magic Zone for group utility.
+  Demon Hunter  -  Retail | Blur for personal defense or Darkness for the group.
+  Druid  -  Both | Regrowth or Rejuvenation. Wild Growth when learned.
+  Evoker  -  Retail | Living Flame or Reversion. Dream Breath for area healing.
+  Hunter  -  Both | Mend Pet, Exhilaration, or learned support abilities.
+  Mage  -  Both | Remove Curse or a group barrier when learned.
+  Monk  -  Retail | Vivify or Enveloping Mist. Revival when learned.
+  Paladin  -  Both | Holy Shock, Flash of Light, and Blessing of Freedom. Divine Toll,
+                    Holy Prism, and Light of Dawn in Retail, or Light's Vigil in Forever.
+  Priest  -  Both | Flash Heal, Penance, or Prayer of Healing.
+  Rogue  -  Both | Crimson Vial or another learned support ability.
+  Shaman  -  Both | Riptide, a direct heal, or Chain Heal.
+  Warlock  -  Both | Soulstone for group support.
+  Warrior  -  Both | Intervene or Rallying Cry when learned.
+
+Healing specializations
+Druid, Evoker, Monk, Paladin, Priest, and Shaman cover Retail's healing classes. Druid,
+Paladin, Priest, and Shaman offer healing in Forever. Class availability depends on your client. Retail Midnight has 13 classes. Forever has nine
+and uses its own talent trees. Classic class and race combinations follow the client.
+
+Utility, dispels, and ranks
+Triage suggests up to two extra spell tiles below the click rows. Suggestions prioritize
+learned dispels, then class and racial support. Hover each icon for the
+game's current effects on Magic, Curse, Poison, Disease, or other effects. For example,
+Retail Holy Cleanse removes Magic and can gain Poison and Disease removal from Improved
+Cleanse. Cleanse Toxins covers Poison and Disease. Remove Curse appears only when learned.
+Blessing of Freedom and learned Beacon spells are selectable in Spell icons. The picker
+includes learned active spells. Names prefer higher learned ranks where the client has ranks.
+Enter an exact spell ID or drop a spell to choose the available rank you want.
+
+Divine Toll and Holy Prism in Midnight
+For Holy Paladins, Divine Toll casts Holy Shock for healing when aimed at an ally. In
+Assign spells, pick Divine Toll, choose a mouse click, and save. Use that click on an ally's
+Triage health bar. The spell tile also accepts a living friendly or hostile target.
+
+Divine Toll and Holy Prism share a Paladin talent choice. On a Herald of the Sun build
+with Holy Prism selected, search for Holy Prism or spell ID 114165. A health bar click uses
+the friendly target. A spell tile can use a friendly or hostile mouseover or target. A
+hostile cast heals nearby allies. Lightsmith uses its Holy Armaments replacement.
+
+Intercession and resurrection
+On a Retail Paladin who has learned Intercession, choose it with Pick or enter 391054.
+Save spells before combat. Use the assigned click on a dead friendly group member within
+range. The spell tile uses a dead friendly mouseover or target. WoW handles cooldowns,
+battle-resurrection charges, and other cast requirements.
+
+Cleanse cue
+Turn on Show a cleanse cue in Appearance for a thin blue mark on the edge of a health
+bar when WoW reports a readable debuff your character can dispel. The cue follows aura
+events on visible bars. Use your chosen dispel when you see it.
+
+Class availability references: worldofwarcraft.blizzard.com/en-us/game/classes and
+worldofwarcraft.blizzard.com/en-us/forever/
+
+==============================================================================
+5. Range alerts and markers
+Coordinate positioning with group markers, alerts, and built-in WoW actions.
+
+
+Automatic range alerts
+Auto alerts starts off in fresh settings. Use the panel button to toggle automatic reminders.
+In Alert settings > Channels, choose the automatic channel and check Enable automatic alerts
+and Send chat announcements. Save alerts applies the choices. Under Behavior, Send native
+minimap ping is a separate switch and starts off. When WoW blocks a native ping, Triage can
+show its local minimap mark.
+
+Choose the automatic chat channel
+Open Alert settings > Channels. The left column shows the automatic destinations. The
+right column shows the manual destinations. The selected button is highlighted in each
+column. Choose Current group, Raid (/raid), Party (/p), Instance (/i), Whisper (/w), Say (/s),
+or Battleground (/i). Current group chooses /party, /raid, or /instance for your group.
+Battleground uses /i for battleground teammates. Automatic Say prepares a /say draft for
+you to send. Automatic Whisper addresses confirmed out-of-range group members individually.
+An unavailable channel pauses chat until it is available. If an older build saved automatic
+Whisper, Test 13 and later switch it to Current group and turn Auto alerts off once on update.
+
+Automatic checks require readable, confirmed range. When a spell check is unavailable,
+Triage may show a fallback to WoW's group range. A large raid is checked in batches of
+up to ten units per timer tick. Turning automatic alerts off stops its timer. Triage waits
+at least 30 seconds between native minimap requests and between group chat requests.
+Automatic range and buff announcements share one 30-second group chat delay. WoW's
+local range cues can update when the healing bars are visible and reminders are paused.
+Use Quiet Group in All heals to pause automatic outgoing reminders together.
+Under Behavior, Repeat while out of range allows another notice after the saved delay.
+
+Manual alerts and audio
+The manual button starts as Manual mark and shows a quiet marker on your own minimap.
+In Alert settings > Channels, check Announce on manual click. Choose a channel in the
+Manual chat channel column, edit the Announcement if desired, and select Save alerts.
+For a manual ping as well, open Behavior and check Add native minimap ping.
+The default message reads "Please come closer to the healer".
+Outgoing reminders start with [Triage - Aegis & Beacon] before the player or message.
+
+Action                       Effect
+Party Notify or Raid !, left-click  -  Use your manual settings for the selected group member.
+Right-click or middle-click  -  Open the channel menu, including Whisper this player.
+Mark healer                  Mark yourself with a green triangle.
+Ping target                  Request WoW's Assist ping on a selected friendly group target.
+Out of range / Far           Show readable or client-displayed range status on a health bar.
+
+Raid teammate alerts
+Use ! at the upper-right of a teammate's raid bar. The symbol brightens gently while you
+hover and returns to normal when the pointer leaves. The rest of the box remains available
+for healing clicks. Turn on Announce on manual click for left-click chat on these buttons.
+
+Manual chat destinations
+The visible channel buttons include Whisper, Raid, Say, and Battleground. More channels
+offers Yell, Guild, Officer, Raid warning, Emote, and Joined channel. For a joined channel,
+enter its name or number, such as /2. For a whisper from the main manual button, enter
+Name-Realm or leave it blank to use your friendly target. Notify and ! address that teammate.
+If WoW blocks a manual chat request, copy the draft shown under Range alerts and paste it
+into WoW chat. The addon leaves your chat input in place.
+
+Ping audio and shared groups
+In Behavior, Mute game ping sounds changes the WoW ping audio setting for your client. G still opens
+WoW's ping controls. Triage pauses native minimap pings while you type or aim a spell.
+Multiple players can use Triage in the same group. When readable events are available,
+Triage briefly holds matching automatic group chat and waits after a teammate's minimap ping.
+Private whispers are separate. You can choose one player to enable automatic reminders for
+the quietest group test.
+
+World markers and unit icons
+In Markers or Combined, left-click a world marker and click the ground. Right-click clears
+that world marker. Clear all removes world markers. For a unit icon, choose Target, Self, or
+Party 1-4 and click an icon. Clear icon removes the selected unit's mark.
+
+The marker symbols are about 15% smaller inside Triage, and the section saves 24 UI pixels
+of height. In Settings > Keybinds, bind Marker list to open the markers temporarily from
+Party or Raid.
+
+Ready check and pull
+Ready check uses WoW's group prompt. 10s pull uses the client countdown when that feature is
+available. WoW validates your group permissions. Direct keys can place or clear markers. The
+marker-list hotkey can open its view during combat.
+
+
+
+==============================================================================
+6. Buff coverage and chat
+Check shareable group buffs and speak only from verified results.
+
+Tracked buff / Provider class
+  Arcane Intellect  -  Mage
+  Power Word: Fortitude  -  Priest
+  Mark of the Wild  -  Druid
+  Battle Shout  -  Warrior
+  Skyfury  -  Shaman in Retail
+  Blessing of the Bronze  -  Evoker in Retail
+  Devotion Aura  -  Paladin in Retail when readable
+  Blessing of Kings  -  Paladin in Forever, including the Greater version
+
+What a scan checks
+Use Settings > Buff coverage > Scan now outside combat. The scan includes every raid slot
+and checks visible, living, connected players for each tracked buff with a provider. Your
+own provider spells are checked against your spellbook. Teammate coverage is based on class
+and availability. Unreadable auras and unavailable players are counted as unchecked.
+
+Group-start announcements
+In Settings > Buff coverage, check Announce missing buffs when a group or instance starts
+and choose Save preferences. This starts off separately from Range alerts. Triage sends one
+[Triage - Aegis & Beacon] summary per group or instance. Raid Finder and Timewalking use
+instance chat. Combat defers the check. Triage retries incomplete scans and reports verified
+counts and unchecked players. A summary from another copy can cancel a duplicate.
+
+Choose a manual destination
+Draft announcement writes a message in Settings. Choose Current group, Party, Raid, Instance /
+battleground, Raid warning, Say, Yell, Guild, Officer, Emote, Whisper, or Numbered channel.
+Enter the player name or channel number when requested. Review and copy the draft, then paste
+it into WoW chat when ready to send.
+
+Turn off notices
+Uncheck the automatic buff option and choose Save preferences. To omit an individual buff from
+scans, uncheck that buff and save.
+
+==============================================================================
+7. Slash command reference
+Enter these commands in the WoW chat box.
+
+Command / Action
+  /triage  -  Toggle the play panel.
+  /triage show  -  Show the play panel.
+  /triage hide  -  Hide the play panel.
+  /triage minimize  -  Collapse the play panel to its title bar.
+  /triage expand  -  Restore the body of the play panel.
+  /triage reset  -  Restore the default panel position and show the panel.
+  /triage settings  -  Open the Settings window.
+  /triage spells  -  Open Custom spells to review or assign click combinations.
+  /triage icons  -  Select zero through ten tiles.
+  /triage mouse  -  Open the Mouse buttons settings tab.
+  /triage practice  -  Preview a healing click.
+  /triage alerts  -  Open the Range alerts settings tab.
+  /triage keys  -  Open WoW's keybinding settings.
+  /triage markers  -  Open or close the temporary marker list.
+  /triage minimap  -  Toggle the minimap button.
+  /triage minimap show  -  Show the minimap button.
+  /triage minimap hide  -  Hide the minimap button.
+  /triage minimap reset  -  Show the minimap button at its default position.
+  /triage version  -  Print the installed release and test build.
+  /triage credits  -  Open creator credits and the local login-message setting.
+  /triage heals  -  Review learned heals, emergency setup, and their keyboard shortcuts.
+  /triage help  -  Print the complete command list in WoW chat.
+
+Shortcuts from the keyboard
+Open Settings > Keybinds to review all 26 binding assignments. Assign in WoW opens the game's
+keybinding interface.
+
+==============================================================================
+
+8. Addon compatibility
+Keep the same healing setup when you use Triage alongside other addons.
+
+NoHatersBullyElitists 1.0.1 compatibility update
+The separate NoHatersBullyElitists update matches "loser" and "losers" as whole words.
+It accepts Triage's default "Please come closer to the healer" in group chat and whispers.
+Older flags and stored chat remain in that addon's history. Its warnings and blacklist
+are local to the client. Reporting requires a player action.
+
+If you still use NoHatersBullyElitists 1.0.0
+Version 1.0.0 can flag Triage's default reminder when it finds "loser" inside "closer".
+Open Triage's Alert settings, enter "Please move within healing range" in Announcement,
+and click Save alerts. To restore the original reminder after updating NoHatersBullyElitists,
+clear the Announcement field and save.
+
+Retail chat and large logs
+The separate NoHatersBullyElitists update declares Retail 12.1.5, skips chat values WoW
+withholds from addons, and refreshes the small counters without rebuilding the log display
+while minimized. Simulated chat verified these changes.
+
+Chat display and healing addons
+Prat changes the chat display. NoHatersBullyElitists can log an original chat event
+even when Prat hides it. Clique, HealBot, VuhDo, and Cell have their own healing frames
+and click settings. Use distinct global shortcut keys for actions from different addons.
+
+Shared raid icons
+DBM, BigWigs, and wMarker can use the same raid icons as Triage. Coordinate marker
+assignments with the group so another addon or player does not move an icon you placed.
+
+==============================================================================
+9. Verification and troubleshooting
+Automated Lua checks covered 36 declared version targets with simulated WoW APIs. Tests exercised startup, learned and ranked spells, pet and talent lookup, and party and raid frames. The Retail and Forever regression suite also checked saved clicks, combat deferral, chat routes, and the 40-player raid layout. Live casting and raid performance remain in beta testing.
+
+1. Test the layout and cast gestures solo
+In Spell icons, switch between zero and ten and turn off just one tile. With an assigned
+heal ready, right-click Self and try its tile. In Custom spells, save a plain and a modified
+click. Find both under Saved clicks, choose one to edit, and preview them in Practice.
+
+2. Check combat controls and assignments
+Save a spell change in Assign spells during combat. Confirm the old binding works through
+the fight and the new one applies after combat. Try the tabs and minimize button too.
+
+3. Verify the full raid roster
+Use Raid or Combined in a pickup raid, a guild raid, or Raid Finder. Triage uses WoW's
+raid roster for all three. Compare a player in another subgroup with the game's roster.
+When Triage opens in an existing raid or after a UI reload, the first refresh fills names
+and health. If WoW defers panel setup or subgroup changes in combat, check again when
+combat ends.
+
+4. Compare chat and pings with a premade party
+With the same teammate, test automatic chat only, native minimap ping only, and both.
+Use the same game settings and note when the movement issue appears. To test a manual
+alert, use its separate chat and native ping checkboxes. For a quiet public matchmaking
+run, leave automatic alerts, both ping options, and the buff announcement unchecked.
+
+5. Retest chat and movement in Raid Finder
+Run /triage version and check movement, health bars, and chat with automatic alerts,
+native pings, and buff announcements off. If movement stalls, note the time, frame rate,
+and WoW's home and world latency. Change one addon at a time when comparing runs.
+If you use NoHatersBullyElitists, compare runs with each addon enabled alone and then together.
+
+6. Check Beacon of Faith on a different teammate
+Confirm Beacon of Faith is learned in the Holy talent tree. Target a teammate who does
+not already have your Beacon of Light. Try the spell from WoW's action bar and then use
+its assigned Triage gesture on that teammate. If multiple spells stall, note WoW's exact
+error and world latency.
+
+7. Check spell drops, alert controls, and health labels
+Drag a learned spell into Assign spells. Return the icon to its source, then save. On a
+Retail Paladin with Intercession, check the assigned click on an eligible fallen teammate.
+Hover over a raid teammate's !, move away, and right-click it to open the channel menu.
+In Appearance, apply each health switch separately, then try both on and both off.
+
+8. Check a talent and its replacement
+On a Holy Paladin, choose Holy Prism in the class tree and apply it. Find it in Browse spells
+and talents and assign it. Switch hero talents or replace the choice with Divine Toll. Check
+the availability status and review the resulting click in Practice. Try a learned tank or
+damage spell on another character to check how WoW targets it.
