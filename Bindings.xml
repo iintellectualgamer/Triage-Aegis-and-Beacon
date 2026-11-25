@@ -1,0 +1,33 @@
+<Bindings>
+    <Binding name="TRIAGEBEACON_MARKERS" category="Triage - Aegis &amp; Beacon">
+        if TriageBeacon_ToggleMarkers then
+            TriageBeacon_ToggleMarkers();
+        end
+    </Binding>
+    <Binding name="CLICK TriageBeaconKeySingle1:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeySingle2:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeySingle3:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyArea1:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyArea2:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyArea3:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyEmergency:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyTarget1:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyTarget2:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyTarget3:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyTarget4:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyTarget5:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyTarget6:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyTarget7:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyTarget8:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyWorld1:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyWorld2:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyWorld3:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyWorld4:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyWorld5:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyWorld6:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyWorld7:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyWorld8:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyClearTarget:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyClearWorld:LeftButton" category="Triage - Aegis &amp; Beacon" />
+    <Binding name="CLICK TriageBeaconKeyAssist:LeftButton" category="Triage - Aegis &amp; Beacon" />
+</Bindings>
