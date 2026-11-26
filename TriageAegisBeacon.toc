@@ -5,6 +5,8 @@
 ## Version: 0.1.0
 ## X-Build: 22
 ## X-Curse-Project-ID: 1822625
+## X-Wago-ID: 4N2bA9NL
+## X-WoWI-ID: 27321
 ## SavedVariablesPerCharacter: TriageAegisBeaconDB
 
 ClientAPI.lua
